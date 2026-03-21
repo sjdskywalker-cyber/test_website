@@ -1,3 +1,12 @@
+Perfect — I’ll add a **Certificates** section using **placeholder images** for now, and I’ll integrate it cleanly into your site. As promised, here is your **fully updated, complete `index.html` file** with everything included.
+
+You can later replace the placeholder images with your real certificate files (e.g., `topik.jpg`, `tesol.png`) by uploading them to your GitHub repo and updating the image paths.
+
+---
+
+# ✅ **Your Updated Full Website With Certificates Section**
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -220,6 +229,27 @@
       margin-bottom: 0.5rem;
     }
 
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .cert-card {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      text-align: center;
+    }
+
+    .cert-card img {
+      width: 100%;
+      border-radius: 0.7rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
     .contact-wrapper {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
@@ -280,7 +310,8 @@
         grid-template-columns: 1fr;
       }
 
-      .grid-3 {
+      .grid-3,
+      .cert-grid {
         grid-template-columns: 1fr;
       }
 
@@ -299,6 +330,7 @@
       <nav>
         <a href="#choose-language">Languages</a>
         <a href="#about">About</a>
+        <a href="#certificates">Certificates</a>
         <a href="#classes-korean">Korean</a>
         <a href="#classes-english">English</a>
         <a href="#contact">Contact</a>
@@ -381,6 +413,34 @@
         <p>
           I’m [Your Name], a language enthusiast and teacher. I help students learn Korean and English step by step.
         </p>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+      <h2 class="section-title">My Certificates</h2>
+      <p class="section-subtitle">
+        These certifications show my dedication to teaching and language mastery.
+      </p>
+
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <img src="https://via.placeholder.com/600x400?text=TOPIK+Certificate" alt="TOPIK Certificate Placeholder">
+          <h3>TOPIK Certificate</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Proof of Korean language proficiency.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <img src="https://via.placeholder.com/600x400?text=TESOL+Certificate" alt="TESOL Certificate Placeholder">
+          <h3>TESOL Certificate</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Certified to teach English to speakers of other languages.
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -481,25 +541,4 @@
             <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.4rem;">
               Replace this with your real contact info:
             </p>
-            <ul style="margin-top:0.5rem; padding-left:1.1rem; font-size:0.9rem; color:var(--text-muted);">
-              <li>• Email</li>
-              <li>• WhatsApp / KakaoTalk</li>
-              <li>• Booking link (Calendly)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    © <span id="year"></span> Language Lessons with [Your Name]. Built with 💙 and 💗 using GitHub Pages.
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
+            <ul style="margin-top:0.5rem; padding-left:1.1rem; font-size:
