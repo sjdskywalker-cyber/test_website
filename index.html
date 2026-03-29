@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Language Lessons with Aryoma</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     :root {
       --blue: #1f6feb;
@@ -12,6 +13,10 @@
       --text-dark: #1f2933;
       --text-muted: #6b7280;
       --white: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     * {
@@ -25,11 +30,12 @@
       background: var(--bg-light);
       color: var(--text-dark);
       line-height: 1.6;
-      padding: 0 1rem; /* prevents text from touching the edge */
+      padding: 0 1rem;
     }
 
     header {
-      background: linear-gradient(135deg, var(--blue), var(--pink));
+      background: linear-gradient(135deg, rgba(31,111,235,0.9), rgba(255,111,181,0.9));
+      backdrop-filter: blur(10px);
       color: var(--white);
       padding: 1.2rem 1.5rem;
       position: sticky;
@@ -47,7 +53,6 @@
 
     .logo {
       font-weight: 700;
-      letter-spacing: 0.03em;
     }
 
     nav a {
@@ -62,8 +67,14 @@
     }
 
     section {
-      margin: 3rem auto;
+      margin: 4rem auto;
       max-width: 1100px;
+    }
+
+    section:nth-child(even) {
+      background: rgba(31,111,235,0.03);
+      padding: 2rem;
+      border-radius: 1rem;
     }
 
     h2.section-title {
@@ -83,6 +94,12 @@
       padding: 1.2rem;
       border: 1px solid rgba(148, 163, 184, 0.3);
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
     }
 
     .pill {
@@ -95,65 +112,23 @@
       margin-bottom: 0.5rem;
     }
 
-    .price {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--blue);
-      margin-bottom: 0.2rem;
-    }
-
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
     }
 
-    .korean-box {
-      border-top: 6px solid var(--pink);
-      padding: 1.5rem;
-      background: rgba(255,111,181,0.05);
-    }
-
-    .english-box {
-      border-top: 6px solid var(--blue);
-      padding: 1.5rem;
-      background: rgba(31,111,235,0.05);
-    }
-
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    form {
-      background: var(--white);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    label {
-      display: block;
-      font-size: 0.85rem;
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-    }
-
-    input, textarea, select {
+    .certificate-img {
       width: 100%;
-      padding: 0.55rem 0.7rem;
+      height: 150px;
+      background: #f1f5f9;
       border-radius: 0.6rem;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
       margin-bottom: 0.8rem;
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
     }
 
     button {
@@ -163,9 +138,28 @@
       cursor: pointer;
       font-size: 1rem;
       font-weight: 600;
-      background: var(--blue);
+      background: linear-gradient(135deg, var(--blue), var(--pink));
       color: var(--white);
       width: 100%;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.55rem;
+      border-radius: 0.6rem;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      margin-bottom: 0.8rem;
     }
 
     footer {
@@ -176,11 +170,6 @@
       color: var(--text-muted);
     }
 
-    footer a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
     @media (max-width: 900px) {
       .grid-2, .contact-wrapper {
         grid-template-columns: 1fr;
@@ -188,123 +177,143 @@
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">Language Lessons with Aryoma</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#classes">Classes</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="nav-container">
+    <div class="logo">Language Lessons with Aryoma</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#experience">Experience</a>
+      <a href="#classes">Classes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-subtitle">My journey with languages and teaching.</p>
-    <div class="card">
-      <h3>안녕하세요 & Hello! I’m Aryoma.</h3>
-      <p>I’m a language enthusiast and teacher. I help students learn Korean and English step by step, with clear explanations, structured lessons, and friendly guidance.</p>
-    </div>
-  </section>
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-subtitle">My journey with languages and teaching.</p>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <h2 class="section-title">Experience</h2>
-    <p class="section-subtitle">My professional journey in teaching and coordination.</p>
-    <div class="card"><h3>KCLC Kolkata</h3><p><strong>Role:</strong> Teacher</p><p><strong>Work:</strong> Conducted Korean language classes and guided learners step by step.</p></div>
-    <div class="card"><h3>TFI</h3><p><strong>Role:</strong> Teacher</p><p><strong>Work:</strong> Taught English and Korean, focusing on structured lessons and confidence building.</p></div>
-    <div class="card"><h3>Asian College of Teachers</h3><p><strong>Role:</strong> Coordination & Evaluation Team</p><p><strong>Work:</strong> Coordinating academic programs and evaluating student performance.</p></div>
-  </section>
-
-  <!-- CLASSES -->
-  <section id="classes">
-    <h2 class="section-title">Language Classes</h2>
-    <p class="section-subtitle">All classes are weekly. Choose Korean or English.</p>
-
-    <div class="grid-2">
-      <!-- Korean -->
-      <div class="korean-box">
-        <h3 style="color:var(--pink);">🇰🇷 Korean Classes</h3>
-        <div class="card"><span class="pill">Beginner</span><h4>Hangul & Basics</h4><p class="price">₹750 / month</p><p>Learn Hangul, pronunciation, and essential phrases.</p></div>
-        <div class="card"><span class="pill">Intermediate</span><h4>Conversation & Grammar</h4><p class="price">₹1250 / month</p><p>Improve speaking, listening, and grammar step by step.</p></div>
-        <div class="card"><span class="pill">TOPIK Guidance</span><h4>Exam Preparation</h4><p class="price">₹1000 / month</p><p>Special guidance for TOPIK exam success.</p></div>
-      </div>
-
-            <!-- English -->
-      <div class="english-box">
-        <h3 style="color:var(--blue);">🇬🇧 English Classes</h3>
-        <div class="card">
-          <span class="pill">Beginner</span>
-          <h4>Basic English</h4>
-          <p class="price">₹750 / month</p>
-          <p>Essential grammar, vocabulary, and simple conversation with weekly classes.</p>
-        </div>
-        <div class="card">
-          <span class="pill">Intermediate</span>
-          <h4>Speaking, Conversation & Interview Prep</h4>
-          <p class="price">₹750 / month</p>
-          <p>Fluency, pronunciation, and interview preparation with weekly classes.</p>
-        </div>
-        <div class="card">
-          <span class="pill">Advanced</span>
-          <h4>Academic / Business English</h4>
-          <p class="price">₹1000 / month</p>
-          <p>Writing, presentations, emails, and professional communication with weekly classes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2 class="section-title">Contact & Trial Lesson</h2>
-    <p class="section-subtitle">Send me a message to ask questions or book a free 20‑minute trial lesson.</p>
-
-    <div class="contact-wrapper">
-      <form>
-        <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Your name" required />
-
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="you@example.com" required />
-
-        <label for="language">Language you want to learn</label>
-        <select id="language">
-          <option>Korean</option>
-          <option>English</option>
-        </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Tell me about your goals, schedule, or questions."></textarea>
-
-        <button type="submit">✉️ Send Message</button>
-      </form>
-
-      <div class="card">
-        <h3>How to Book</h3>
-        <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.4rem;">
-          You can reach me directly:
+  <div class="card">
+    <div style="display:flex; gap:1rem; align-items:center;">
+      <div>
+        <h3>안녕하세요 & Hello! I’m Aryoma.</h3>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          Korean & English Language Instructor
         </p>
-        <ul style="margin-top:0.5rem; padding-left:1.1rem; font-size:0.9rem; line-height:1.6;">
-          <li><strong>Email:</strong> your@email.com</li>
-          <li><strong>WhatsApp:</strong> +91-XXXXXXXXXX</li>
-          <li><strong>Zoom/Meet link:</strong> [Add booking link]</li>
-        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Language Lessons with Aryoma. All rights reserved.</p>
-    <p><a href="#contact">Contact me</a> | <a href="#experience">Experience</a></p>
-  </footer>
+    <p style="margin-top:1rem;">
+      I help students learn Korean and English step by step with structured lessons and friendly guidance.
+    </p>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <h2 class="section-title">Certificates</h2>
+  <p class="section-subtitle">Verified qualifications and language credentials.</p>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <div class="certificate-img">[Add TESOL Certificate Image]</div>
+      <span class="pill">Teaching</span>
+      <h3>TESOL Certification</h3>
+      <p>Certified in Teaching English to Speakers of Other Languages (TESOL), with training in structured language instruction and student engagement.</p>
+    </div>
+
+    <div class="card">
+      <div class="certificate-img">[Add TOPIK Certificate Image]</div>
+      <span class="pill">Korean</span>
+      <h3>TOPIK Certification</h3>
+      <p>Certified in Korean language proficiency (TOPIK), demonstrating strong command of reading, writing, and comprehension.</p>
+    </div>
+
+  </div>
+
+  <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--text-muted);">
+    * Certificate images will be updated soon for verification.
+  </p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="card">
+    <h3>KCLC Kolkata</h3>
+    <p>Teacher - Korean language instruction</p>
+  </div>
+
+  <div class="card">
+    <h3>TFI</h3>
+    <p>Teacher - English & Korean</p>
+  </div>
+
+  <div class="card">
+    <h3>Asian College of Teachers</h3>
+    <p>Coordination & Evaluation Team</p>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes">
+  <h2 class="section-title">Language Classes</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>🇰🇷 Korean Classes</h3>
+      <p>Beginner to TOPIK preparation</p>
+    </div>
+
+    <div class="card">
+      <h3>🇬🇧 English Classes</h3>
+      <p>Basic to Advanced communication</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="card" style="text-align:center;">
+    <h2>Start Your Language Journey 🚀</h2>
+    <p class="section-subtitle">Book a free trial lesson today.</p>
+    <a href="#contact"><button style="max-width:250px; margin:auto;">Book Free Trial</button></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-wrapper">
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <select>
+        <option>Korean</option>
+        <option>English</option>
+      </select>
+      <textarea placeholder="Your message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="card">
+      <p>Email: your@email.com</p>
+      <p>WhatsApp: +91-XXXXXXXXXX</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Language Lessons with Aryoma</p>
+</footer>
 
 </body>
 </html>
