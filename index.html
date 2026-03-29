@@ -76,6 +76,7 @@
       border: 1px solid rgba(148,163,184,0.3);
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
       transition: 0.25s;
+      margin-bottom: 1rem;
     }
 
     .card:hover {
@@ -102,6 +103,7 @@
     .price {
       font-weight: bold;
       color: var(--blue);
+      margin-bottom: 0.3rem;
     }
 
     .korean-box {
@@ -128,7 +130,19 @@
       margin-bottom: 0.7rem;
     }
 
-    /* 🔥 CONTACT IMPROVEMENTS */
+    /* LinkedIn-style experience */
+    .exp-role {
+      font-weight: 600;
+      margin-top: 0.3rem;
+    }
+
+    .exp-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    /* CONTACT */
     .contact-wrapper {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
@@ -223,7 +237,6 @@
 <!-- CERTIFICATES -->
 <section id="certificates">
   <h2 class="section-title">Certificates</h2>
-  <p class="section-subtitle">Verified qualifications.</p>
 
   <div class="grid-2">
     <div class="card">
@@ -246,16 +259,33 @@
   </p>
 </section>
 
-<!-- EXPERIENCE (UNCHANGED) -->
+<!-- EXPERIENCE (LINKEDIN STYLE) -->
 <section id="experience">
   <h2 class="section-title">Experience</h2>
 
-  <div class="card"><h3>KCLC Kolkata</h3><p>Teacher</p></div>
-  <div class="card"><h3>TFI</h3><p>Teacher</p></div>
-  <div class="card"><h3>Asian College of Teachers</h3><p>Coordination & Evaluation Team</p></div>
+  <div class="card">
+    <h3>KCLC Kolkata</h3>
+    <div class="exp-meta">Jan 2023 – Dec 2024 · 1 yr 11 mos</div>
+    <div class="exp-role">Korean Language Teacher</div>
+    <p>Conducted structured Korean language classes, helping students build strong foundations in grammar, vocabulary, and conversation.</p>
+  </div>
+
+  <div class="card">
+    <h3>TFI</h3>
+    <div class="exp-meta">Mar 2022 – Dec 2022 · 10 mos</div>
+    <div class="exp-role">English & Korean Instructor</div>
+    <p>Delivered interactive lessons focusing on fluency, confidence building, and practical communication skills.</p>
+  </div>
+
+  <div class="card">
+    <h3>Asian College of Teachers</h3>
+    <div class="exp-meta">Jun 2021 – Feb 2022 · 9 mos</div>
+    <div class="exp-role">Coordination & Evaluation Team</div>
+    <p>Managed academic coordination, evaluated student performance, and ensured smooth program delivery.</p>
+  </div>
 </section>
 
-<!-- CLASSES (FULL ORIGINAL STRUCTURE PRESERVED) -->
+<!-- CLASSES -->
 <section id="classes">
   <h2 class="section-title">Language Classes</h2>
 
@@ -275,14 +305,14 @@
         <span class="pill">Intermediate</span>
         <h4>Conversation & Grammar</h4>
         <p class="price">₹1250 / month</p>
-        <p>Improve speaking and grammar.</p>
+        <p>Improve speaking, listening, and grammar step by step.</p>
       </div>
 
       <div class="card">
         <span class="pill">TOPIK</span>
         <h4>Exam Preparation</h4>
         <p class="price">₹1000 / month</p>
-        <p>TOPIK exam guidance.</p>
+        <p>Special guidance for TOPIK exam success.</p>
       </div>
     </div>
 
@@ -293,25 +323,28 @@
         <span class="pill">Beginner</span>
         <h4>Basic English</h4>
         <p class="price">₹750 / month</p>
+        <p>Essential grammar, vocabulary, and simple conversation with weekly structured lessons.</p>
       </div>
 
       <div class="card">
         <span class="pill">Intermediate</span>
-        <h4>Conversation & Interview</h4>
+        <h4>Speaking, Conversation & Interview Prep</h4>
         <p class="price">₹750 / month</p>
+        <p>Improve fluency, pronunciation, and confidence for real-life communication and interviews.</p>
       </div>
 
       <div class="card">
         <span class="pill">Advanced</span>
-        <h4>Business English</h4>
+        <h4>Academic / Business English</h4>
         <p class="price">₹1000 / month</p>
+        <p>Master professional communication, writing, presentations, and workplace English.</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT (UPGRADED UI) -->
+<!-- CONTACT -->
 <section id="contact">
   <h2 class="section-title">Contact & Trial Lesson</h2>
 
