@@ -224,29 +224,83 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-      <div class="badge">Learn Korean or English with confidence</div>
-      <h1>Personalized <span>language lessons</span> for motivated learners</h1>
-      <p>
-        I teach Korean and English with clear explanations, structured lessons, and friendly guidance.
+      <!-- LANGUAGE SELECTION -->
+    <section id="choose-language">
+      <h2 class="section-title">Choose your language</h2>
+      <p class="section-subtitle">
+        I teach both Korean and English. Select the language you want to learn.
       </p>
-      <div class="hero-buttons">
-        <a href="#choose-language" class="btn btn-primary">Choose your language</a>
-        <a href="#contact" class="btn btn-outline">Book a free trial</a>
-      </div>
-    </div>
-  </section>
 
-  <main>
+      <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="card" style="border-top: 4px solid var(--pink);">
+          <h3 style="color: var(--pink);">🇰🇷 Learn Korean</h3>
+          <p style="color: var(--text-muted); margin: 0.5rem 0 1rem;">
+            Hangul, grammar, conversation, K‑culture vocabulary, and more.
+          </p>
+          <a href="#classes-korean" class="btn btn-primary" style="background: var(--pink); border: none;">
+            View Korean Classes
+          </a>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--blue);">
+          <h3 style="color: var(--blue);">🇬🇧 Learn English</h3>
+          <p style="color: var(--text-muted); margin: 0.5rem 0 1rem;">
+            Speaking, grammar, pronunciation, writing, and confidence building.
+          </p>
+          <a href="#classes-english" class="btn btn-primary">
+            View English Classes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="section-title">About me</h2>
+      <p class="section-subtitle">
+        My journey with languages and teaching.
+      </p>
+      <div class="card">
+        <h3>안녕하세요 & Hello! I’m Aryoma.</h3>
+        <p>
+          I’m a language enthusiast and teacher. I help students learn Korean and English step by step, 
+          with clear explanations, structured lessons, and friendly guidance.
+        </p>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+      <h2 class="section-title">My Certificates</h2>
+      <p class="section-subtitle">
+        These certifications show my dedication to teaching and language mastery.
+      </p>
+
+      <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=TOPIK+Certificate" alt="TOPIK Certificate">
+          <h3>TOPIK Certificate</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Proof of Korean language proficiency.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=TESOL+Certificate" alt="TESOL Certificate">
+          <h3>TESOL Certificate</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Certified to teach English to speakers of other languages.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- KOREAN CLASSES -->
     <section id="classes-korean">
       <h2 class="section-title">Korean Classes</h2>
       <p class="section-subtitle">All classes are weekly. Structured lessons for beginners, intermediate learners, and TOPIK exam prep.</p>
 
-      <div class="grid-3">
+      <div class="grid-3" style="grid-template-columns: 1fr;">
         <div class="card">
           <span class="pill">Beginner</span>
           <h3>Hangul & Basics</h3>
@@ -270,12 +324,12 @@
       </div>
     </section>
 
-        <!-- ENGLISH CLASSES -->
+    <!-- ENGLISH CLASSES -->
     <section id="classes-english">
       <h2 class="section-title">English Classes</h2>
       <p class="section-subtitle">All classes are weekly. Improve your English for school, work, travel, or daily life.</p>
 
-      <div class="grid-3">
+      <div class="grid-3" style="grid-template-columns: 1fr;">
         <div class="card">
           <span class="pill">Beginner</span>
           <h3>Basic English</h3>
@@ -328,13 +382,11 @@
 
     <!-- CONTACT -->
     <section id="contact">
-      <h2 class="section-title">Contact & trial lesson</h2>
-      <p class="section-subtitle">
-        Send me a message to ask questions or book a free 20‑minute trial lesson.
-      </p>
+      <h2 class="section-title">Contact & Trial Lesson</h2>
+      <p class="section-subtitle">Send me a message to ask questions or book a free 20‑minute trial lesson.</p>
 
       <div class="contact-wrapper">
-        <form>
+        <form style="box-shadow:0 8px 20px rgba(0,0,0,0.08);">
           <label for="name">Name</label>
           <input id="name" type="text" placeholder="Your name" required />
 
@@ -350,32 +402,18 @@
           <label for="message">Message</label>
           <textarea id="message" placeholder="Tell me about your goals, schedule, or questions."></textarea>
 
-          <button type="submit" class="btn btn-primary" style="margin-top:0.3rem; width:100%;">
-            Send message (demo only)
+          <button type="submit" class="btn btn-primary" style="margin-top:0.5rem; width:100%; font-size:1rem;">
+            ✉️ Send Message
           </button>
         </form>
 
-        <div>
-          <div class="card">
-            <h3>How to book</h3>
-            <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.4rem;">
-              Replace this with your real contact info:
-            </p>
-            <ul style="margin-top:0.5rem; padding-left:1.1rem; font-size:0.9rem;">
-              <li>Email: your@email.com</li>
-              <li>WhatsApp: +91-XXXXXXXXXX</li>
-              <li>Zoom/Meet link: [Add booking link]</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Language Lessons with Aryoma. All rights reserved.</p>
-    <p><a href="#contact">Contact me</a> | <a href="#experience">Experience</a></p>
+        <div class="card" style="box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+          <h3>How to Book</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.4rem;">
+            You can reach me directly:
+          </p>
+          <ul style="margin-top:0.5rem; padding-left:1.1rem; font-size:0.9rem; line-height:1.6;">
+            <li><strong>Email
   </footer>
 
 </body>
