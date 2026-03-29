@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Language Lessons with Aryoma</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Language Lessons with Aryoma - Korean classes in Kolkata, TOPIK guidance, and English lessons. Weekly classes available for all levels.">
   <style>
     :root {
       --blue: #1f6feb;
@@ -14,8 +13,197 @@
       --text-muted: #6b7280;
       --white: #ffffff;
     }
-    /* (CSS same as you shared earlier, keeping styles intact) */
-    /* ... full CSS from your index file ... */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--pink));
+      color: var(--white);
+      padding: 1.2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-text h1 span {
+      color: var(--pink);
+    }
+
+    .hero-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      max-width: 32rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--blue);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--blue);
+      border: 1px solid rgba(31, 111, 235, 0.4);
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 1.2rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.2rem;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(31, 111, 235, 0.06);
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 2.5rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        position: static;
+      }
+    }
   </style>
 </head>
 <body>
@@ -28,9 +216,9 @@
         <a href="#choose-language">Languages</a>
         <a href="#about">About</a>
         <a href="#certificates">Certificates</a>
-        <a href="#experience">Experience</a>
         <a href="#classes-korean">Korean</a>
         <a href="#classes-english">English</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -49,118 +237,35 @@
         <a href="#contact" class="btn btn-outline">Book a free trial</a>
       </div>
     </div>
-    <div class="hero-card">
-      <h2>Why students choose my lessons</h2>
-      <ul>
-        <li>🇰🇷🇬🇧 Clear explanations in simple English</li>
-        <li>🗣️ Speaking practice every lesson</li>
-        <li>📚 Custom notes and homework</li>
-        <li>💻 Online lessons via Zoom/Meet</li>
-      </ul>
-      <div>
-        <span class="tag">Beginner‑friendly</span>
-        <span class="tag">Flexible schedule</span>
-        <span class="tag">Friendly teaching style</span>
-      </div>
-    </div>
   </section>
 
   <main>
 
-    <!-- LANGUAGE SELECTION -->
-    <section id="choose-language">
-      <h2 class="section-title">Choose your language</h2>
-      <p class="section-subtitle">I teach both Korean and English. Select the language you want to learn.</p>
-      <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
-        <div class="card" style="border-top: 4px solid var(--pink);">
-          <h3 style="color: var(--pink);">🇰🇷 Learn Korean</h3>
-          <p style="color: var(--text-muted);">Hangul, grammar, conversation, and TOPIK guidance.</p>
-          <a href="#classes-korean" class="btn btn-primary" style="background: var(--pink); border: none;">View Korean Classes</a>
-        </div>
-        <div class="card" style="border-top: 4px solid var(--blue);">
-          <h3 style="color: var(--blue);">🇬🇧 Learn English</h3>
-          <p style="color: var(--text-muted);">Basic English, speaking, interview prep, and advanced lessons.</p>
-          <a href="#classes-english" class="btn btn-primary">View English Classes</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2 class="section-title">About me</h2>
-      <p class="section-subtitle">I’m Aryoma, passionate about teaching languages and helping students achieve their goals.</p>
-      <div class="card">
-        <h3>안녕하세요 & Hello! Nice to meet you.</h3>
-        <p>I help students learn Korean and English step by step, with weekly classes and personalized guidance.</p>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2 class="section-title">Experience</h2>
-      <p class="section-subtitle">My professional journey in teaching and coordination.</p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>KCLC Kolkata</h3>
-          <p><strong>Role:</strong> Teacher</p>
-          <p><strong>Duration:</strong> [Add time spent]</p>
-          <p>Worked as a language teacher, guiding students in Korean basics and conversation.</p>
-        </div>
-        <div class="card">
-          <h3>TFI</h3>
-          <p><strong>Role:</strong> Teacher</p>
-          <p><strong>Duration:</strong> [Add time spent]</p>
-          <p>Taught English and Korean, focusing on structured lessons and student engagement.</p>
-        </div>
-        <div class="card">
-          <h3>Asian College of Teachers</h3>
-          <p><strong>Role:</strong> Coordination & Evaluation Team</p>
-          <p><strong>Duration:</strong> Current</p>
-          <p>Part of the coordination and evaluation team, ensuring quality in teaching and assessments.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATES -->
-    <section id="certificates">
-      <h2 class="section-title">My Certificates</h2>
-      <p class="section-subtitle">These certifications show my dedication to teaching and language mastery.</p>
-      <div class="cert-grid">
-        <div class="cert-card">
-          <img src="https://via.placeholder.com/600x400?text=TOPIK+Certificate" alt="TOPIK Certificate Placeholder">
-          <h3>TOPIK Certificate</h3>
-          <p>Proof of Korean language proficiency.</p>
-        </div>
-        <div class="cert-card">
-          <img src="https://via.placeholder.com/600x400?text=TESOL+Certificate" alt="TESOL Certificate Placeholder">
-          <h3>TESOL Certificate</h3>
-          <p>Certified to teach English to speakers of other languages.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- KOREAN CLASSES -->
     <section id="classes-korean">
       <h2 class="section-title">Korean Classes</h2>
-      <p class="section-subtitle">All Korean classes are weekly.</p>
+      <p class="section-subtitle">All classes are weekly. Structured lessons for beginners, intermediate learners, and TOPIK exam prep.</p>
+
       <div class="grid-3">
         <div class="card">
           <span class="pill">Beginner</span>
           <h3>Hangul & Basics</h3>
           <p class="price">₹750 / month</p>
-          <p>Weekly classes covering Hangul, pronunciation, and essential phrases.</p>
+          <p>Learn Hangul, pronunciation, and essential phrases with weekly classes.</p>
         </div>
+
         <div class="card">
           <span class="pill">Intermediate</span>
           <h3>Conversation & Grammar</h3>
           <p class="price">₹1250 / month</p>
-          <p>Weekly classes focusing on grammar, listening, and speaking practice.</p>
+          <p>Improve speaking, listening, and grammar step by step with weekly classes.</p>
         </div>
+
         <div class="card">
           <span class="pill">TOPIK Guidance</span>
           <h3>Exam Preparation</h3>
           <p class="price">₹1000 / month</p>
-          <p>Weekly classes with special guidance for TOPIK exam preparation.</p>
+          <p>Special guidance for TOPIK exam success with weekly classes.</p>
         </div>
       </div>
     </section>
@@ -168,13 +273,111 @@
     <!-- ENGLISH CLASSES -->
     <section id="classes-english">
       <h2 class="section-title">English Classes</h2>
-      <p class="section-subtitle">All English classes are weekly.</p>
+      <p class="section-subtitle">All classes are weekly. Improve your English for school, work, travel, or daily life.</p>
+
       <div class="grid-3">
         <div class="card">
-          <span class="pill">Basic</span>
+          <span class="pill">Beginner</span>
           <h3>Basic English</h3>
           <p class="price">₹750 / month</p>
-          <p>Weekly classes covering essential grammar, vocabulary, and simple conversation.</p>
+          <p>Essential grammar, vocabulary, and simple conversation with weekly classes.</p>
         </div>
+
         <div class="card">
-          <span class="
+          <span class="pill">Intermediate</span>
+          <h3>Speaking, Conversation & Interview Prep</h3>
+          <p class="price">₹750 / month</p>
+          <p>Fluency, pronunciation, and interview preparation with weekly classes.</p>
+        </div>
+
+        <div class="card">
+          <span class="pill">Advanced</span>
+          <h3>Academic / Business English</h3>
+          <p class="price">₹1000 / month</p>
+          <p>Writing, presentations, emails, and professional communication with weekly classes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-subtitle">My professional journey in teaching and coordination.</p>
+
+      <div class="card">
+        <h3>KCLC Kolkata</h3>
+        <p><strong>Role:</strong> Teacher</p>
+        <p><strong>Duration:</strong> [Add time spent]</p>
+        <p><strong>Work:</strong> Conducted Korean language classes and guided learners step by step.</p>
+      </div>
+
+      <div class="card">
+        <h3>TFI</h3>
+        <p><strong>Role:</strong> Teacher</p>
+        <p><strong>Duration:</strong> [Add time spent]</p>
+        <p><strong>Work:</strong> Taught English and Korean, focusing on structured lessons and confidence building.</p>
+      </div>
+
+      <div class="card">
+        <h3>Asian College of Teachers</h3>
+        <p><strong>Role:</strong> Coordination & Evaluation Team</p>
+        <p><strong>Duration:</strong> Current</p>
+        <p><strong>Work:</strong> Coordinating academic programs and evaluating student performance.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact & trial lesson</h2>
+      <p class="section-subtitle">
+        Send me a message to ask questions or book a free 20‑minute trial lesson.
+      </p>
+
+      <div class="contact-wrapper">
+        <form>
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+
+          <label for="language">Language you want to learn</label>
+          <select id="language">
+            <option>Korean</option>
+            <option>English</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me about your goals, schedule, or questions."></textarea>
+
+          <button type="submit" class="btn btn-primary" style="margin-top:0.3rem; width:100%;">
+            Send message (demo only)
+          </button>
+        </form>
+
+        <div>
+          <div class="card">
+            <h3>How to book</h3>
+            <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.4rem;">
+              Replace this with your real contact info:
+            </p>
+            <ul style="margin-top:0.5rem; padding-left:1.1rem; font-size:0.9rem;">
+              <li>Email: your@email.com</li>
+              <li>WhatsApp: +91-XXXXXXXXXX</li>
+              <li>Zoom/Meet link: [Add booking link]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Language Lessons with Aryoma. All rights reserved.</p>
+    <p><a href="#contact">Contact me</a> | <a href="#experience">Experience</a></p>
+  </footer>
+
+</body>
+</html>
+          <p class="price">₹
